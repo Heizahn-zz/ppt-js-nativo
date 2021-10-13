@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <title>PPT Nativo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styleMobile.css" />
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <img src="./img/logo.svg" alt="" />
+      </div>
+      <div class="puntos">
+        <p>Puntaje</p>
+        <h2 id="puntosGanados">0 </h2>
+      </div>
+    </header>
+    <main>
+      <button id="papel" data-choice="papel"><img src="./img/paper.svg" alt="papel" /></button>
+      <button id="tijera" data-choice="tijera"><img src="./img/scissors.svg" alt="tijera"/></button>
+      <button id="piedra" data-choice="piedra"><img src="./img/rock.svg" alt="piedra" /></button>
+    </main>
+    <div id="resultadoSeleccion">
+      <div id="seleccion"> 
+        <div id="seleccionUsuario">
+          <h2>Tu eleccion</h2>
+          <button id="papel"><img src="./img/paper.svg" alt="papel" /></button>
+        </div>
+        <div id="seleccionMaquina">
+          <h2>Eleccion CPU</h2>
+          <button id="piedra"><img src="./img/rock.svg" alt="piedra" /></button>
+        </div>
+        <div class="vs">
+          <h1>Tu Ganaste<span id="resultadoVs"></span></h1>
+          <buttom id="reset">Jugar de nuevo</buttom>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <button id="reglas">Reglas</button>
+      <a>Hecho por Humberto Bracho</a>
+    </footer>
+
+    <script src="./logica.js"></script>
+  </body>
+</html>
