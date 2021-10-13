@@ -13,18 +13,27 @@ const piedraBtn = document.getElementById("piedra");
 const papelBtn = document.getElementById("papel");
 const tijeraBtn = document.getElementById("tijera");
 const resultadoPantalla = document.getElementById("puntosGanados")
+const main = document.getElementById("main");
+const seleccion = document.getElementById("seleccion")
+const resultadoVs = document.getElementById("resultadoVs");
 
 piedraBtn.addEventListener("click", function(){
   eleccion(Piedra);
   console.log(Piedra)
+  main.style.display = 'none';
+  seleccion.style.display = 'flex';
 });
 papelBtn.addEventListener("click", function(){
   eleccion(Papel);
   console.log(Papel)
+  main.style.display = 'none';
+  seleccion.style.display = 'flex';
 });
 tijeraBtn.addEventListener("click", function(){
   eleccion(Tijera);
   console.log(Papel)
+  main.style.display = 'none';
+  seleccion.style.display = 'flex';
 })
 
 function eleccion(userOption){
@@ -33,13 +42,13 @@ function eleccion(userOption){
 
   switch (result) {
     case Empate:
-      resultadoPantalla.innerHTML = Score
+      (resultadoPantalla.innerHTML = Score) || (resultadoVs.innerHTML = "Fue un Empate");
     break;
     case Ganador:
-      resultadoPantalla.innerHTML = Score += 1
+      (resultadoPantalla.innerHTML = Score += 1) && (resultadoVs.innerHTML = "Tu Ganastes");
     break;
     case Perdedor:
-      resultadoPantalla.innerHTML = Score -= 1
+      (resultadoPantalla.innerHTML = Score -= 1) && (resultadoVs.innerHTML = "Tu Perdistes");
     break;
   }
 }

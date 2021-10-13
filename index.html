@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/styleMobile.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="title">
         <img src="./img/logo.svg" alt="" />
       </div>
@@ -24,25 +24,30 @@
         <h2 id="puntosGanados">0 </h2>
       </div>
     </header>
-    <main>
-      <button id="papel" data-choice="papel"><img src="./img/paper.svg" alt="papel" /></button>
-      <button id="tijera" data-choice="tijera"><img src="./img/scissors.svg" alt="tijera"/></button>
-      <button id="piedra" data-choice="piedra"><img src="./img/rock.svg" alt="piedra" /></button>
+    <main id="main">
+      <button id="papel" data-choice="papel"
+        ><img src="./img/paper.svg" alt="papel"
+      /></button>
+      <button id="tijera" data-choice="tijera"
+        ><img src="./img/scissors.svg" alt="tijera"
+      /></button>
+      <button id="piedra" data-choice="piedra"
+        ><img src="./img/rock.svg" alt="piedra"
+      /></button>
     </main>
-    <div id="resultadoSeleccion">
-      <div id="seleccion"> 
-        <div id="seleccionUsuario">
-          <h2>Tu eleccion</h2>
-          <button id="papel"><img src="./img/paper.svg" alt="papel" /></button>
-        </div>
-        <div id="seleccionMaquina">
-          <h2>Eleccion CPU</h2>
-          <button id="piedra"><img src="./img/rock.svg" alt="piedra" /></button>
-        </div>
-        <div class="vs">
-          <h1>Tu Ganaste<span id="resultadoVs"></span></h1>
-          <buttom id="reset">Jugar de nuevo</buttom>
-        </div>
+
+    <div id="seleccion">
+      <div id="seleccionUsuario">
+        <h2>Tu eleccion</h2>
+        <button id="papel"><img src="./img/paper.svg" alt="papel" /></button>
+      </div>
+      <div id="seleccionMaquina">
+        <h2>Eleccion CPU</h2>
+        <button id="piedra"><img src="./img/rock.svg" alt="piedra" /></button>
+      </div>
+      <div class="vs">
+        <h1 id="resultadoVs"></h1>
+        <buttom id="reset">Jugar de nuevo</buttom>
       </div>
     </div>
 
