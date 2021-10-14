@@ -22,6 +22,7 @@ body {
 }
 
 .header {
+  width: 40rem;
   padding: 1rem 3rem;
   border-radius: 1rem;
   border: 0.5rem solid rgba(255, 255, 255, 0.4);
@@ -31,7 +32,7 @@ body {
 }
 .header .title {
   width: 12rem;
-  margin: 0 3rem 0 0;
+  margin: 0 4rem 0 0;
 }
 .header .title img {
   width: 100%;
@@ -137,42 +138,53 @@ body {
   align-items: center;
   font-size: 4rem;
 }
-#seleccion button img {
-  width: 50%;
+#seleccion img{
+  width: 100%;
 }
-#seleccion button {
+#seleccion #seleccionUsuario img {
+  background-color: white;
+  margin-top: 2.2rem;
   width: 14rem;
   height: 14rem;
   border-radius: 50%;
   transition: 0.4s;
+  padding: 2rem;
+}
+#seleccion #seleccionMaquina img {
+  background-color: white;
+  margin-top: 2.2rem;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  transition: 0.4s;
+  padding: 2rem;
 }
 
-#seleccion #papel {
+#seleccion #userSeleccion {
   border: 1.5rem solid hsl(230, 89%, 62%);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
 }
-#seleccion #piedra {
+#seleccion #machineSeleccion {
   border: 1.5rem solid hsl(349, 71%, 52%);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
 }
-#seleccion #tijera {
-  border: 1.5rem solid hsl(40, 84%, 53%);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
-}
 
-#seleccion #reset {
-  transition: 0.6s;
-  margin-top: 1rem;
-  padding: 1rem;
+#seleccion .vs #reset {
+  transition: 0.4s;
+  margin-top: 2rem;
+  height: 4rem;
+  width: 18rem;
   border-radius: 1rem;
+  background-color: white;
+  color: hsl(237, 49%, 15%);
   border: 0.4rem solid rgba(255, 255, 255, 0.4);
+  box-shadow: 3px 3px 50px rgba(255, 255, 255, 0.2);
 }
 #seleccion #reset:hover {
-  transition: 0.4s;
+  transition: 0.3s;
   cursor: pointer;
-  border: 0.4rem solid wheat;
   color: hsl(229, 64%, 46%);
-  background-color: wheat;
+  transform: scale(1.4);
 }
 
 footer {
@@ -192,8 +204,8 @@ footer button {
 }
 
 footer button:hover {
-  border: 0.5rem solid wheat;
-  background-color: wheat;
+  border: 0.5rem solid rgba(255, 255, 255, 0.4);
+  background-color: white;
   color: hsl(229, 64%, 46%);
   cursor: pointer;
   transition: 0.4s;
@@ -203,34 +215,84 @@ footer a:hover {
   cursor: pointer;
 }
 
-@media screen and (max-width: 320px) {
+footer .reglas {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  background-color: azure;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: darkgray;
+}
+footer .reglas .reglasTitle {
+  font-size: 3.6rem;
+}
+footer .reglas img {
+  width: 30rem;
+  height: 30rem;
+}
+footer .reglas .fa-times {
+  font-size: 6rem;
+  color: darkgray;
+  border: none;
+}
+footer .reglas .fa-times:hover {
+  transform: scale(1.5);
+  transition: .2s;
+  background-color: white;
+  border: none;
+}
+@media screen and (max-width: 375px) {
   body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
   }
-
-  .main {
+  .header{
+    padding: 0;
+    margin: 0;
+    width: 28rem;
+  }
+  #main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: 32rem;
+    width: 28rem;
     height: 50%;
-    background-size:70%;
-    background-position: 5rem 10rem;
+    padding: 0;
+    margin: 0;
+    background-size: 80%;
+    background-position: 50% 50%;
   }
-  .main button {
-    margin-top: 5rem;
-    width: 12rem;
-    height: 12rem;
+  #main button {
+    width: 10rem;
+    height: 10rem;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.4s;
+  }
+  #main #papel {
+    border: 1rem solid hsl(230, 89%, 62%);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+  }
+  #main #piedra {
+    border: 1rem solid hsl(349, 71%, 52%);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+  }
+  #main #tijera {
+    border: 1rem solid hsl(40, 84%, 53%);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
   }
   .main button:hover {
     transform: scale(125%);
     transition: 0.4s;
   }
-  footer{
+  footer {
     margin-top: 4rem;
   }
 }

@@ -1,0 +1,78 @@
+body{
+  background: radial-gradient(
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+}
+.header{
+  width: 60rem;
+}
+#main{
+  display: flex;
+  width: 60rem;
+  height: 35rem;
+  background-size: 50%;
+  background-position: 50% 70%;
+}
+#main button{
+  width: 15rem;
+  height: 15rem;
+  margin: 0 4.5rem;
+}
+
+#seleccion{
+  width: 100%;
+}
+#seleccion #seleccionUsuario{
+  order: -1;
+}
+#seleccion #seleccionUsuario button{
+  margin-top: 2rem;
+}
+#seleccion .vs{
+  order: 0;
+}
+#seleccion .vs #reset{
+  margin-top: 2rem;
+}
+#seleccion #seleccionMaquina{
+  order: 1;
+}
+
+#seleccion #seleccionMaquina button{
+  margin-top: 2rem;
+}
+#reglas{
+  width: 30%;
+  height: 45rem;
+  top: 25%;
+  left: 37.5%;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem .5rem rgba(0, 0, 0, .2);
+  display: none;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 2rem;
+}
+#reglas .reglasTitle{
+  order: -1;
+}
+#reglas .fa-times{
+  font-size: 3.4rem;
+  order: 0;
+}
+#reglas .fa-times:hover{
+color: brown;
+transform: none;
+}
+
+#reglas img{
+  order: 1;
+}
+footer{
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+  margin-right: 3rem;
+}

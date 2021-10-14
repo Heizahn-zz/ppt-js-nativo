@@ -12,7 +12,9 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/38b7a4b148.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styleMobile.css" />
+    <link rel="stylesheet" href="./css/styleDesktop.css" media="screen and (min-width: 1024px)">
   </head>
   <body>
     <header class="header">
@@ -39,20 +41,25 @@
     <div id="seleccion">
       <div id="seleccionUsuario">
         <h2>Tu eleccion</h2>
-        <button id="papel"><img src="./img/paper.svg" alt="papel" /></button>
+        <img id="userSeleccion" src="./img/paper.svg" alt="papel" />
       </div>
       <div id="seleccionMaquina">
         <h2>Eleccion CPU</h2>
-        <button id="piedra"><img src="./img/rock.svg" alt="piedra" /></button>
+        <img id="machineSeleccion" src="./img/rock.svg" alt="piedra" />
       </div>
       <div class="vs">
-        <h1 id="resultadoVs"></h1>
-        <buttom id="reset">Jugar de nuevo</buttom>
+        <h1 id="resultadoVs">Perdistes</h1>
+        <button id="reset">Jugar de nuevo</button>
       </div>
     </div>
 
     <footer>
-      <button id="reglas">Reglas</button>
+      <div id="reglas" class="reglas">
+        <h2 class="reglasTitle">Reglas</h2>
+        <img src="./img/image-rules.svg" alt="">
+        <button id="cerrarReglas" class="fas fa-times"></button>
+      </div>
+      <button id="leerReglas">Leer Reglas</button>
       <a>Hecho por Humberto Bracho</a>
     </footer>
 
